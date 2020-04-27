@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="studentprimaryinfo"
+		class="com.tyss.student.dto.StudentPrimaryInfo" scope="prototype">
+		<property name="studentId" value="100"></property>
+		<property name="studentName" value="Kiran"></property>
+		<property name="contactNumber" value="9538512364"></property>
+		<property name="secondaryInfo" ref="studentsecondaryinfo"></property>
+	</bean>
+
+	<bean id="studentsecondaryinfo"
+		class="com.tyss.student.dto.StudentSecondaryInfo">
+		<property name="fatherName" value="Kush"></property>
+		<property name="motherName" value="Kushi"></property>
+	</bean>
+
+</beans>
